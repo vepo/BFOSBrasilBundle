@@ -3,12 +3,12 @@
 
 <div {{ block('widget_container_attributes') }}>
 {% for child in form %}
-    <div id="{{ id ~ "_" ~ child.get('name') }}">
+    <div id="{{ id ~ "_" ~ child.vars.name }}">
         {{ form_widget(child) }}
-        {% if child.get('name') == 'estado' %}
+        {% if child.vars.name == 'estado' %}
         <span class="help-block">Cidade</span>
         {% endif %}
-        {% if child.get('name') == 'cidade' %}
+        {% if child.vars.name == 'cidade' %}
         <img id="{{ id ~ "_loader" }}" src="{{asset('bundles/bfosbrasil/images/ajax-loader.gif')}}" alt="ajax-loader" style="display: none; ">
         {% endif %}
         {{ form_errors(child) }}

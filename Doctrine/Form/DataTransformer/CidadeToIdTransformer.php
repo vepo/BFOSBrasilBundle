@@ -23,7 +23,7 @@ class CidadeToIdTransformer implements DataTransformerInterface
 
     protected $em;
     protected $class = 'BFOSBrasilBundle:Cidade';
-    protected $propertyPath = 'nome';
+    //protected $propertyPath = 'nome';
 
     public function __construct(EntityManager $em)
     {
@@ -31,7 +31,7 @@ class CidadeToIdTransformer implements DataTransformerInterface
 
         // The property option defines, which property (path) is used for
         // displaying entities as strings
-        $this->propertyPath = new PropertyPath($this->propertyPath);
+        //$this->propertyPath = new PropertyPath($this->propertyPath);
     }
 
 

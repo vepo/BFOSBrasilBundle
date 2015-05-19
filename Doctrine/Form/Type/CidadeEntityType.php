@@ -33,7 +33,6 @@ class CidadeEntityType extends AbstractType
 
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-
         $builder->addViewTransformer(new CidadeToIdTransformer($this->container->get('doctrine')->getEntityManager()));
     }
 
@@ -46,7 +45,7 @@ class CidadeEntityType extends AbstractType
 
     public function getParent()
     {
-        return 'field';
+        return 'form';
     }
 
     public function getName()
